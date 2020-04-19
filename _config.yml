@@ -16,8 +16,7 @@
 title: Jens Knipper
 email: mail@jensknipper.de
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml.
+  Developer blog of Jens Knipper. Covering stories about software development, DevOps and Indie Hacking.
 baseurl: "" # the subpath of your site if applicable, e.g. /blog
 url: "https://blog.jensknipper.de" # the base hostname & protocol for your site, e.g. https://example.com
 

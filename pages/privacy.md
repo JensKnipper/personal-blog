@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Privacy Notice
+title: Privacy Policy
 permalink: /privacy
 section: privacy
 intro_paragraph: | 
-    asdf
+    This site does not store any of your information.
 ---
-asdf
