@@ -4,7 +4,9 @@
   url: /
 - text: About
   url: /about
-- text: Contact
-  url: /contact
 - text: Blog
   url: /blog
+- text: Contact
+  url: /contact
+- text: <i class="fas fa-rss"></i>
+  url: /feed.xml
