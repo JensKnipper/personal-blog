@@ -3,8 +3,7 @@ layout: contact
 title: Contact
 permalink: /contact
 section: contact
-intro_paragraph: |-
-
+description: |-
   Got any questions or want to get in contact?
 ---
 

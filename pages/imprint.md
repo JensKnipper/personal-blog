@@ -3,6 +3,6 @@ layout: page
 title: Imprint
 permalink: /imprint
 section: imprint
-intro_paragraph: | 
+description: | 
   Coming soon.
 ---

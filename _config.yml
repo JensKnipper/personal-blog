@@ -61,6 +61,8 @@ kramdown:
   auto_ids: false
 
 plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-feed
 # Include in processing (e.g. Netlify directives)
 # Uncomment before use
