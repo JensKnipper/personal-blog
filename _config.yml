@@ -19,6 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Developer blog of Jens Knipper. Covering stories about software development, DevOps and Indie Hacking.
 baseurl: "" # the subpath of your site if applicable, e.g. /blog
 url: "https://blog.jensknipper.de" # the base hostname & protocol for your site, e.g. https://example.com
+logo: /icons/icon.png
 
 # Permalink format (/blog/ is ignored for pages)
 permalink: /blog/:title
