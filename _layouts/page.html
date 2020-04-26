@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
-
-<h2>{{ page.title }}</h2>
-
-{% include description.html %}
-
-{{ content }}
+<div class="post">
+    <h1 class="pageTitle">{{ page.title }}</h1>
+    {% if page.image and page.image != '' %}
+        <img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt="">
+    {% endif %}
+    {% include description.html %}
+    {{ content }}
+</div>

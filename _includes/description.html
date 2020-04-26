@@ -1,5 +1,6 @@
 {% if page.description and page.description != '' %}
   <p class="intro">
-    {{ page.description | markdownify | remove: '<p>' | remove: '</p>' }}
+    <span class="dropcap">{{ page.description | markdownify | remove: '<p>' | remove: '</p>' | slice: 0 }}</span>
+    {{ page.description | markdownify | remove: '<p>' | remove: '</p>' | slice: 1, page.description.size }}
   </p>
 {% endif %}
