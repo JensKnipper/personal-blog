@@ -1,19 +1,10 @@
 ---
 layout: page
-title: About Long Haul
-description: Long Haul is a minimal, long form [Jekyll](http://jekyllrb.com) Theme. It can be used as is or customized to your hearts desire.
+title: About Jens Knipper
+description: Welcome my personal blog. I am a software engineer who likes writing about programming and everything related.
 permalink: /about
 section: about
 ---
-Long Haul was created in honor of all the hard working touring bicycles that have traversed the globe time and time again. Take it for a spin.
-## Features
-- Built with SASS + GULP + BROWSERSYNC + AUTOPREFIXER
-- SVG Social Icons from [Customizr](http://customizr.net/icons/)
-- [Responsive Nav Menu](http://responsive-nav.com/)
-- [XML Feed for RSS Readers](https://github.com/snaptortoise/jekyll-rss-feeds)
-- Contact Form via [Formspree](http://formspree.io/)
-- 5 Post Loop with excerpt on Home Page
-- Previous / Next Post Navigation
-- Estimated Reading Time for posts
-- [Drop Cap](https://github.com/adobe-webplatform/dropcap.js)
-- [A Better Type Scale](http://typecast.com/blog/a-more-modern-scale-for-web-typography)
+To contact me, just open the contact page or use one of the networks linked in the bottom of the page.  
+  
+ If you got any suggestions for new topics, found any errors or just want to add something feel free to open a ticket and/or pull request in the [blog's repository](https://github.com/JensKnipper/personal-blog).
