@@ -14,6 +14,11 @@ paginate: 5
 
 netlifycms: true
 
+# Compress CSS
+sass:
+  style: compressed
+  sass_dir: _sass
+
 navigation:
   - title: Home
     url: /index.html
@@ -39,6 +44,4 @@ exclude:
   - netlify.toml
   - Gemfile
   - Gemfile.lock
-  - gulpfile.js
-  - package.json
   - docker-compose.yml
