@@ -2,7 +2,7 @@
 layout: post
 title: HTTP to HTTPS redirects with Traefik
 author: jens_knipper
-date: '2020-04-27 12:00:00'
+date: '2020-05-01 12:00:00'
 description: This article covers the basic examples how to redirect HTTP-requests to HTTPS. This can be achieved per domain, for a single application only or globally for all containers.
 categories: traefik, docker, docker-compose, http, https, ssl
 ---
