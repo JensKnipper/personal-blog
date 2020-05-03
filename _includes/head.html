@@ -12,9 +12,10 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
     <!--[if IE 8]><link rel="stylesheet" href="{{ "/assets/ie.css" | relative_url }}"><![endif]-->
+    <link rel="stylesheet" href="{{ "/assets/css/fontawesome/css/all.min.css" | relative_url }}">
 
     <!-- Modernizr -->
-    <script src="{{ "/assets/js/modernizr.custom.15390.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+    <script src="{{ "/assets/js/modernizr.custom.15390.js" | relative_url }}" type="text/javascript"></script>
 
     {% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
 </head>
