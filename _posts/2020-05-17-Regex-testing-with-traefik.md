@@ -3,6 +3,7 @@ layout: post
 title: Testing Regular Expressions in Traefik
 author: jens_knipper
 date: '2020-05-17 20:00:00'
+last_modified_at: '2020-05-21 20:00:00'
 description: Testing regular expressions for application configuration is always a pain as every programming language has a slightly different implementation. This results in expressions giving different results for different applications.
 categories: Traefik, Regex, Regular Expression, Go
 ---
