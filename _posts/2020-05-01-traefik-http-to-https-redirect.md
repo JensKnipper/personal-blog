@@ -49,7 +49,7 @@ Type in the urls `http://whoami.localhost` and `https://whoami.localhost` and yo
       - "traefik.http.routers.whoami.tls=true"
 {% endhighlight %}
 
-The full example code can also be found on [Github](https://github.com/JensKnipper/traefik-examples/blob/master/http-redirect-global/docker-compose.yml).  
+The full example code can also be found on [Github](https://github.com/JensKnipper/traefik-examples/blob/master/redirects/http-to-https-redirect/http-redirect-global/docker-compose.yml).  
 All the code may be executed locally by simply running the command `docker-compose up`.   
 
 ## Per Domain HTTP to HTTPS redirect
@@ -101,7 +101,7 @@ Type in the url `http://whoami.localhost`. It should not redirect to HTTPS. Acce
       - "traefik.http.routers.whoami2.entrypoints=web"
       - "traefik.http.routers.whoami2.rule=Host(`whoami2.localhost`)"
 {% endhighlight %}
-The full example code can also be found on [Github](https://github.com/JensKnipper/traefik-examples/blob/master/http-redirect-per-domain/docker-compose.yml).  
+The full example code can also be found on [Github](https://github.com/JensKnipper/traefik-examples/blob/master/redirects/http-to-https-redirect/http-redirect-per-domain/docker-compose.yml).  
 All the code may be executed locally by simply running the command `docker-compose up`.  
 
 ## Conclusion
