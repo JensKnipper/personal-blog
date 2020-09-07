@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Privacy Policy
-permalink: /privacy
-section: privacy
+title: Links
+permalink: /links
+section: links
 description: https://www.netcup.de/bestellen/produkt.php?produkt=2058
 ---
