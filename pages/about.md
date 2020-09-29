@@ -1,9 +1,9 @@
 ---
 layout: page
 title: About
-description: Welcome to my personal blog. I am a software engineer who likes writing about programming and everything related.
 permalink: /about
 section: about
+description: Welcome to my personal blog. I am a software engineer who likes writing about programming and everything related.
 ---
 To contact me, just open the contact page or use one of the networks linked in the bottom right hand corner of the page.  
   
