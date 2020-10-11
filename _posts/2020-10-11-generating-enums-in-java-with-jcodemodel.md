@@ -2,7 +2,7 @@
 layout: post
 title: Generating Enums in Java with JCodeModel
 author: jens_knipper
-date: '2020-10-05 01:00:00'
+date: '2020-10-11 01:00:00'
 description: This article will show you how to generate your own enum classes with jCodeModel. A framework to generate java classes.
 categories: Java, jCodeModel
 ---
