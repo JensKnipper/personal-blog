@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dealing with generic fields in JCodeModel
+title: Generating generic fields in JCodeModel
 author: jens_knipper
 date: '2020-10-14 01:00:00'
 description: Another article about JCodeModel. This time we will make a short excursion about how to generate generic fields in JCodeModel.
