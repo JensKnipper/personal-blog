@@ -119,3 +119,4 @@ JCodeModel is a nice framework, but lacks some solid documentation.
 I hope this article will help you to generate your own Java classes without crawling through the framework's JavaDoc or codebase.
 You can check out he whole example code on [Github](https://gist.github.com/JensKnipper/2a267325faad1e3fa4f490d36cb2330a).
 
+Interested in more? Here is [another article about jCodeModel](../dealing-with-generic-fields-in-jcodemodel)!

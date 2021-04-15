@@ -6,7 +6,7 @@ date: '2020-10-14 01:00:00'
 description: Another article about JCodeModel. This time we will make a short excursion about how to generate generic fields in JCodeModel.
 categories: Java, jCodeModel
 ---
-I recently wrote an article about [generating enums with JCodeModel](https://blog.jensknipper.de/blog/generating-enums-in-java-with-jcodemodel/).
+I recently wrote an article about [generating enums with JCodeModel](../generating-enums-in-java-with-jcodemodel/).
 Due to the lack of documentation of JCodeModel using it can become very time consuming. 
 I had to put in a lot of time to research a lot of basic stuff. 
 This article will show you how to declare and assign generic fields.

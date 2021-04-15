@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Manually testing email notifications with GreenMail
+title: Manually testing email notifications with GreenMail mock mail server
 author: jens_knipper
 date: '2021-02-16 01:00:00'
+last_modified_at: '2021-04-15 01:00:00'
 description: Are you sending mails featured with HTML and CSS and want see how they look before pushing your changes to production? You also do not want mails to leak from your local environment to your customer? A mock mail server like GreenMail might just be the tool you need.
 categories: Java, Spring, GreenMail, Docker
 ---
-Whenever developing an application I aim to get my local environment as close to production as possible without neglecting elementary things like privacy and security. This gives an advantage when implementing new features. You get the same user experience on your local device. This enables you to find troublesome or unclear sections.  
+Whenever developing an application I aim to get local and testing environment as close to production as possible without neglecting elementary things like privacy and security. This gives an advantage when implementing new features. You get the same user experience on your local device. This enables you to find troublesome or unclear sections.  
 It also lowers the barrier for manual testing, which results in more and higher quality feedback from everyone (not only developers) involved in the project. 
 
 For testing purposes you usually do not want to connect to production systems. That is why local or test environments often use local instances of additional applications like a database. This can also be applied to a mail server. When executing a local instance of a mail server you have to configure it properly to avoid leakage of data to your customers. A mock mail server like [GreenMail](https://greenmail-mail-test.github.io/greenmail/) is built to keep data on the same machine thus serves as a good option.
@@ -54,6 +55,8 @@ To make Roundcube use GreenMail you habe to specify certain environment variable
 You can read mails using the IMAP or POP3 protocol. You just need to specify the url and the port. Writing mails can be done using the SMTP protocol where you also have to specify the url and the proper port.
 
 GreenMail automatically accepts all incoming mails. If there is no corresponding address, one will automatically be created. The password is equal to the mail address.  
-Because of this you should not make the GreenMail and Roundcube instances publicly available. If you still want to integrate it in your test or staging environment it is highly recommended to secure it with a reverse proxy like nginx or Traefik.
+Because of this you should not make the GreenMail and Roundcube instances publicly available. If you still want to integrate it in your test or staging environment it is highly recommended to secure it with a reverse proxy like nginx or [Traefik](../basic-authentication-with-traefik).
+
+## Further readings
 
 You can check out the whole configuration on [GitHub](https://github.com/JensKnipper/greenmail-example/blob/main/docker-compose.yml). There is also a small example application where you can test the described behaviour in action.
