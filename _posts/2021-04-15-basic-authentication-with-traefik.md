@@ -7,6 +7,7 @@ description: Adding authentication to a service that does not support it by defa
 categories: traefik, docker, docker-compose, authentication
 ---
 In this article I will show you how to secure a service in Traefik reverse proxy using basic authentication.
+You could use the authentication for example to secure your [Traefik dashboard](../exposing-traefik-dashboard/).
 The example can be executed locally which allows simple adjustment to your own needs.
 Technologies used are only docker and docker-compose.
 For the purpose of simpler declaration I will not make use of configuration files, but only use docker labels.

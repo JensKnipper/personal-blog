@@ -32,7 +32,9 @@ services:
 {% endhighlight %}
 
 There are a few environment variables you can set to configure GreenMail. A good option is setting the logging to verbose. This way you can identify misconfigurations easily.  
-All of the most common mail protocols are supported. The ports have an offset of 3000 compared to the default port of the corresponding protocol. That's it, you are now able to use GreenMail in your application.
+All of the most common mail protocols are supported. The ports have an offset of 3000 compared to the default port of the corresponding protocol. That's it, you are now able to use GreenMail in your application. 
+
+Simply set `localhost` as the host and specify the port you want to connect to in your local environment's application properties.
 
 To test your mails locally you can either connect to a desktop client like Thunderbird or install a web client. A simple but popular web client is [Roundcube](https://roundcube.net/). In this example running it in a docker container is also the simplest approach.
 
