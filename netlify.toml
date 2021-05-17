@@ -22,19 +22,23 @@
 [[redirects]]
   from = "http://blog.jensknipper.de/*"
   to = "https://jensknipper.de/:splat"
+  force = true
 
 [[redirects]]
   from = "https://blog.jensknipper.de/*"
   to = "https://jensknipper.de/:splat"
+  force = true
 
 [[redirects]]
   from = "http://www.blog.jensknipper.de/*"
   to = "https://jensknipper.de/:splat"
+  force = true
 
 [[redirects]]
   from = "https://www.blog.jensknipper.de/*"
   to = "https://jensknipper.de/:splat"
-
+  force = true
+  
 # The default HTTP status code is always 301, but you can define a different
 # one e.g. status = 302
 
