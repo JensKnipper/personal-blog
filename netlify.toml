@@ -19,9 +19,18 @@
 
 # Redirect rule example
 
-#[[redirects]]
-#  from = "/*"
-#  to = "/blog/:splat"
+[[redirects]]
+  from = "http://blog.jensknipper.de/*"
+  to = "https://jensknipper.de/:splat"
+
+  from = "https://blog.jensknipper.de/*"
+  to = "https://jensknipper.de/:splat"
+
+  from = "http://www.blog.jensknipper.de/*"
+  to = "https://jensknipper.de/:splat"
+
+  from = "https://www.blog.jensknipper.de/*"
+  to = "https://jensknipper.de/:splat"
 
 # The default HTTP status code is always 301, but you can define a different
 # one e.g. status = 302
