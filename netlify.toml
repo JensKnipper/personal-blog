@@ -23,12 +23,15 @@
   from = "http://blog.jensknipper.de/*"
   to = "https://jensknipper.de/:splat"
 
+[[redirects]]
   from = "https://blog.jensknipper.de/*"
   to = "https://jensknipper.de/:splat"
 
+[[redirects]]
   from = "http://www.blog.jensknipper.de/*"
   to = "https://jensknipper.de/:splat"
 
+[[redirects]]
   from = "https://www.blog.jensknipper.de/*"
   to = "https://jensknipper.de/:splat"
 
