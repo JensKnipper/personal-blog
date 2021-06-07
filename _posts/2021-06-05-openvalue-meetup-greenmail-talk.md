@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Recording and Slides of My Talk "Testing email with GreenMail, a mock mail server" at an OpenValue Meetup
-image: openvalue-greenmail-talk.jpg
+image: /assets/img/openvalue-greenmail-talk.jpg
 author: jens_knipper
 date: '2021-06-05 01:00:00'
 description: Last week I hold my talk "Testing email with GreenMail, a mock mail server" at a virtual meetup of OpenValue. In this post, you can find the slides and the recording of my talk.

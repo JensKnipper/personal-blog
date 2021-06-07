@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exposing Traefik dashboard to a subdomain
-image: traefik_dashboard.png
+image: /assets/img/traefik_dashboard.png
 author: jens_knipper
 date: '2021-05-16 01:00:00'
 description: The Traefik dashboard is the central place where everything you configured is represented in a clear manner. In case you are running into problems and you are in need to do some troubleshooting,the dashboard should be your place to go.
