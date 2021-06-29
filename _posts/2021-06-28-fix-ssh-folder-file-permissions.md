@@ -2,7 +2,7 @@
 layout: post
 title: Fixing ssh folder file permissions
 author: jens_knipper
-date: '2021-06-028 01:00:00'
+date: '2021-06-28 01:00:00'
 description: I recently got an error on my work machine when copying ssh keys from Windows into WSL Linux. The error stated that the permissions were to open for my private key. 
 categories: Linux, SSH
 ---
