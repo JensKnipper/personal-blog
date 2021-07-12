@@ -3,6 +3,7 @@ layout: post
 title: HTTP to HTTPS redirects with Traefik
 author: jens_knipper
 date: '2020-05-01 12:00:00'
+last_modified_at: '2021-07-12 01:00:00'
 description: This article covers the basic examples how to redirect HTTP-requests to HTTPS. This can be achieved per domain, for a single application only or globally for all containers.
 categories: traefik, docker, docker-compose, http, https, ssl
 ---
@@ -15,7 +16,7 @@ Save yourself the trouble and enforce HTTPS. Here is how to.
 The easiest and probably most used variant is to redirect to HTTPS globally. Once configured all your running services will use it. 
 
 ### Traefik configuration
-The configuration of Traefik is displayed in the following code block. Due to the configuration in the `ports` section, the ports `80` and `443` of the Traefik Container are mapped to the port of the machine running the container. The ports are each mapped to specific entrypoints. `443` to the `websecure` and `80` to the `web` entrypoint. The `web` entrypoint additionally has a redirection to the `websecure` entrypoint. The scheme is defined as `https`, a predefined scheme by Traefik which turns HTTP into HTTPS.  
+The configuration of Traefik is displayed in the following code block. Due to the configuration in the `ports` section, the ports `80` and `443` of the Traefik Container are mapped to the port of the machine running the container. The ports are each mapped to specific entrypoints. `443` to the `websecure` and `80` to the `web` entrypoint. The `web` entrypoint additionally has a redirection to the `websecure` entrypoint. The scheme is defined as `https`, a predefined scheme by Traefik which automatically turns HTTP into HTTPS.  
 This results in all traffic coming in at port `80` being redirected to port `443` - the default HTTPS port.
 
 {% highlight yaml %}
@@ -37,7 +38,7 @@ This results in all traffic coming in at port `80` being redirected to port `443
 ### Container configuration
 If we would now add a container we could see the redirect in action. We can just use a simple whoami service which displays information about the user accessing it.  
 As all the traffic is redirected to `websecure`, there is no need to setup a router for the `web` entrypoint.  
-TLS has to be set to true to enable transport encryption.  
+TLS, which is the successor of SSL, has to be set to true to enable transport encryption.  
 Type in the urls `http://whoami.localhost` and `https://whoami.localhost` and you will see that you allways end up accessing the service via HTTPS.
 
 {% highlight yaml %}
@@ -53,6 +54,7 @@ The full example code can also be found on [Github](https://github.com/JensKnipp
 All the code may be executed locally by simply running the command `docker-compose up`.   
 
 ## Per Domain HTTP to HTTPS redirect
+It is also possible to have per domain redirects and activate redirects only for certain services. On all other services the redirect will be disabled.  
 The Traefik configuration becomes a little simpler as there is no need to redirect anymore. At the same time configuration of containers redirecting to HTTPS becomes a little more complex.
 
 ### Traefik configuration
