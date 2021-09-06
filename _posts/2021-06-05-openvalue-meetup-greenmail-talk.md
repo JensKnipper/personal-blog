@@ -27,3 +27,7 @@ GreenMail is an open source, intuitive and easy-to-use suite of mock email serve
 <center>
     <iframe src="https://slides.com/jensknipper/greenmail/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </center>
+
+## Code
+
+The code examples shown in the talk are available on [GitHub](https://github.com/JensKnipper/greenmail-example).

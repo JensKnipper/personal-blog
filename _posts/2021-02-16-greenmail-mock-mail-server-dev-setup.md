@@ -10,7 +10,7 @@ categories: Java, Spring, GreenMail, Docker
 Whenever developing an application I aim to get local and testing environment as close to production as possible without neglecting elementary things like privacy and security. This gives an advantage when implementing new features. You get the same user experience on your local device. This enables you to find troublesome or unclear sections.  
 It also lowers the barrier for manual testing, which results in more and higher quality feedback from everyone (not only developers) involved in the project. 
 
-For testing purposes you usually do not want to connect to production systems. That is why local or test environments often use local instances of additional applications like a database. This can also be applied to a mail server. When executing a local instance of a mail server you have to configure it properly to avoid leakage of data to your customers. A mock mail server like [GreenMail](https://greenmail-mail-test.github.io/greenmail/) is built to keep data on the same machine thus serves as a good option.
+For testing purposes you usually do not want to connect to production systems. That is why local or test environments often use local instances of additional applications like a database. This can also be applied to a mail server. When executing a local instance of a mail server you have to configure it properly to avoid leakage of data to your customers. A mock mail server like [GreenMail](https://greenmail-mail-test.github.io/greenmail/) is built to keep data on the same machine thus serves as a good option for local email server testing.
 
 ## GreenMail Docker configuration
 
@@ -21,7 +21,7 @@ version: '3'
 
 services:
   greenmail:
-    image: "greenmail/standalone"
+    image: greenmail/standalone:latest
     environment:
       - JAVA_OPTS=-Dgreenmail.verbose
     ports:
@@ -31,10 +31,11 @@ services:
       - 3465:3465 # SMTPS
       - 3993:3993 # IMAPS
       - 3995:3995 # POP3S
+      - 8080:8080 # API
 {% endhighlight %}
 
 There are a few environment variables you can set to configure GreenMail. A good option is setting the logging to verbose. This way you can identify misconfigurations easily.  
-All of the most common mail protocols are supported. The ports have an offset of `3000` compared to the default port of the corresponding protocol. That's it, you are now able to use GreenMail in your application. 
+All of the most common mail protocols and their SSL variants are supported. This includes SMTP, POP3 and IMAP. The ports have an offset of `3000` compared to the default port of the corresponding protocol. That's it, you are now able to use GreenMail in your application. 
 
 Simply set `localhost` as the host and specify the port you want to connect to in your local environment's application properties.
 
@@ -48,16 +49,15 @@ A simple but popular web client is [Roundcube](https://roundcube.net/). In this 
 
 {% highlight yaml %}
   roundcube:
-    image: roundcube/roundcubemail
+    image: roundcube/roundcubemail:latest
     depends_on:
       - greenmail
     ports:
       - 8000:80
-      - 9000:9000
     environment:
-      - ROUNDCUBEMAIL_DEFAULT_HOST=greenmail  # IMAP server - tls:// prefix for STARTTLS
+      - ROUNDCUBEMAIL_DEFAULT_HOST=greenmail  # IMAP server - tls:// prefix for STARTTLS, ssl:// for SSL/TLS
       - ROUNDCUBEMAIL_DEFAULT_PORT=3143       # IMAP port
-      - ROUNDCUBEMAIL_SMTP_SERVER=greenmail   # SMTP server - tls:// prefix for STARTTLS
+      - ROUNDCUBEMAIL_SMTP_SERVER=greenmail   # SMTP server - tls:// prefix for STARTTLS, ssl:// for SSL/TLS
       - ROUNDCUBEMAIL_SMTP_PORT=3025          # SMTP port
 {% endhighlight %}
 
