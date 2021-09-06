@@ -1,0 +1,100 @@
+---
+layout: post
+title: 
+author: jens_knipper
+date: '9999-06-30 01:00:00'
+description: 
+categories: 
+---
+https://github.com/JensKnipper/greenmail-example/blob/main/src/main/java/de/jensknipper/greenmailexample/control/mail/receive/MailReceiveClient.java
+
+
+{% highlight java %}
+package de.jensknipper.greenmailexample.control.mail.receive;
+
+import de.jensknipper.greenmailexample.control.mail.mapper.MailMapper;
+import de.jensknipper.greenmailexample.model.Mail;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import javax.mail.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Properties;
+import java.util.stream.Collectors;
+
+@Component
+public final class MailReceiveClient {
+
+    private final String protocol;
+    private final String host;
+    private final String port;
+    private final String user;
+    private final String password;
+
+    public MailReceiveClient(@Value("${mail.store.protocol}") String protocol,
+                             @Value("${mail.store.host}") String host,
+                             @Value("${mail.store.port}") String port,
+                             @Value("${spring.mail.username}") String user,
+                             @Value("${spring.mail.password}") String password) {
+        this.protocol = protocol;
+        this.host = host;
+        this.port = port;
+        this.user = user;
+        this.password = password;
+    }
+
+    public List<Mail> receive() {
+        Store emailStore = null;
+        Folder emailFolder = null;
+
+        Properties properties = new Properties();
+        properties.put("mail.store.protocol", protocol);
+        properties.put("mail." + protocol + ".host", host);
+        properties.put("mail." + protocol + ".port", port);
+        Session emailSession = Session.getDefaultInstance(properties);
+
+        try {
+            emailStore = emailSession.getStore();
+            emailStore.connect(user, password);
+
+            emailFolder = emailStore.getFolder("INBOX");
+            emailFolder.open(Folder.READ_WRITE);
+
+            return getNewMails(emailFolder);
+
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (emailFolder != null && emailFolder.isOpen()) {
+                    emailFolder.close(false);
+                }
+                if (emailStore != null && emailStore.isConnected()) {
+                    emailStore.close();
+                }
+            } catch (MessagingException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private List<Mail> getNewMails(Folder emailFolder) throws MessagingException {
+        List<Mail> mails =
+                Arrays.stream(emailFolder.getMessages())
+                        .filter(
+                                it -> {
+                                    try {
+                                        return !it.getFlags().contains(Flags.Flag.SEEN);
+                                    } catch (MessagingException e) {
+                                        e.printStackTrace();
+                                    }
+                                    return false;
+                                })
+                        .map(MailMapper::map)
+                        .collect(Collectors.toList());
+        emailFolder.setFlags(1, emailFolder.getMessageCount(), new Flags(Flags.Flag.SEEN), true);
+        return mails;
+    }
+}
+{% endhighlight %}
