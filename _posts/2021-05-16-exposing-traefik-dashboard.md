@@ -7,7 +7,7 @@ date: '2021-05-16 01:00:00'
 description: The Traefik dashboard is the central place where everything you configured is represented in a clear manner. In case you are running into problems and you are in need to do some troubleshooting,the dashboard should be your place to go.
 categories: traefik, docker, docker-compose, dashboard
 ---
-In the dashboard here you can see all your entrypoints (ports Traefik listens to), routers (connects requests to services), services (define how to reach your actual services) and middlewares (tweak your services eg. [adding authentication](./basic-authentication-with-traefik))
+In the dashboard here you can see all your entrypoints (ports Traefik listens to), routers (connects requests to services), services (define how to reach your actual services) and middlewares (tweak your services eg. [adding authentication](../basic-authentication-with-traefik))
 
 ## Traefik configuration
 
@@ -42,6 +42,6 @@ This is a Traefik specific service which represents the API and the dashboard.
 
 ## Further readings
 
-Because you are showing a lot of sensible information about your network and your running services you should always [add authentication](./basic-authentication-with-traefik) to secure your dashboard whenever it is publicly available.
+Because you are showing a lot of sensible information about your network and your running services you should always [add authentication](../basic-authentication-with-traefik) to secure your dashboard whenever it is publicly available.
 
 As always full source code is available on [GitHub](https://github.com/JensKnipper/traefik-examples/blob/master/dashboard/expose-traefik-dashboard-to-subdomain/docker-compose.yml).
