@@ -4,7 +4,7 @@ title: Exposing Traefik dashboard to a subdomain
 image: /assets/img/traefik_dashboard.png
 author: jens_knipper
 date: '2021-05-16 01:00:00'
-description: The Traefik dashboard is the central place where everything you configured is represented in a clear manner. In case you are running into problems and you are in need to do some troubleshooting,the dashboard should be your place to go.
+description: The Traefik dashboard is the central place where everything you configured is represented in a clear manner. In case you are running into problems and you are in need to do some troubleshooting, the dashboard should be your place to go.
 categories: traefik, docker, docker-compose, dashboard
 ---
 In the dashboard here you can see all your entrypoints (ports Traefik listens to), routers (connects requests to services), services (define how to reach your actual services) and middlewares (tweak your services eg. [adding authentication](../basic-authentication-with-traefik))
@@ -39,6 +39,8 @@ This is a Traefik specific service which represents the API and the dashboard.
       - "traefik.http.routers.api.rule=Host(`traefik.localhost`)"
       - "traefik.http.routers.api.service=api@internal"
 {% endhighlight %}
+
+If you now start the service with `docker-compose up` and navigate to `traefik.localhost` you are able to access the dashboard.
 
 ## Further readings
 

@@ -14,7 +14,7 @@ For the purpose of simpler declaration I will not make use of configuration file
 
 ## Traefik configuration
 
-A minimalist configuration of Traefik can be seen in the code block below. 
+A minimalistic configuration of Traefik can be seen in the code block below. 
 Only port `80` is exposed end assigned to the `web` entrypoint.
 All incoming traffic is now routed through this specific entrypoint.
 
@@ -53,7 +53,7 @@ For password creation have a look at the next chapter.
 
 This example resolves to the credentials with both username and password `test`.
 
-If you now start the service and navigate to `whoami.localhost` you will be prompted to type in the credentials.
+If you now start the services with `docker-compose up` and navigate to `whoami.localhost` you will be prompted to type in the credentials.
 After successfull login you should be able to access the containers content.
 
 ### Password hashing
