@@ -7,8 +7,8 @@ date: '2021-06-05 01:00:00'
 description: Last week I hold my talk "Testing email with GreenMail, a mock mail server" at a virtual meetup of OpenValue. In this post, you can find the slides and the recording of my talk.
 categories: Java, GreenMail, Talk
 ---
-I really enjoyed the evening and the opportunity to speak at the [meetup](https://www.meetup.com/OpenValue/events/278102326/), thank you very much. Special thanks to [Bert Jan Schrijver](https://twitter.com/bjschrijver) for organizing the meetups.  
-Unfortunately the audio quality is not as good as I hoped it would be. It seems like I connected with the wrong microphone.
+I really enjoyed the evening and the opportunity to speak at the [meetup](https://www.meetup.com/OpenValue/events/278102326/) from [OpenValue](https://www.openvalue.eu), thank you very much. Special thanks to [Bert Jan Schrijver](https://twitter.com/bjschrijver) for organizing the meetups.  
+Unfortunately the audio quality is not as good as I hoped it would be.
 
 ## Abstract
 
