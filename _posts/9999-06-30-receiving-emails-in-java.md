@@ -2,7 +2,7 @@
 layout: post
 title: Receiving mails in Java with IMAP or POP3
 author: jens_knipper
-date: '2021-09-13 01:00:00'
+date: '9999-06-30 01:00:00'
 description: I was recently in need to write some small demo project which was receiving and processing mails. There is a lot of documentation for receiving mails, but gathering information about the sending part is less easy.
 categories: Java, Mail, IMAP, POP3
 ---
