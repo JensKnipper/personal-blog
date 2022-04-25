@@ -11,15 +11,13 @@ I will also give some hints about how to handle incoming mails concerning applic
 
 ## Receiving mails
 
---TODO maven import for javax mail needed? 
---TODO split up code
+--TODO split up and explain code
 
 {% highlight java %}
 import javax.mail.*;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.stream.Collectors;
 
 public final class MailReceiveClient {
 
@@ -45,7 +43,7 @@ public final class MailReceiveClient {
         properties.put("mail.store.protocol", protocol);
         properties.put("mail." + protocol + ".host", host);
         properties.put("mail." + protocol + ".port", port);
-        Session emailSession = Session.getDefaultInstance(properties);
+        Session emailSession = Session.getInstance(properties);
 
         try {
             emailStore = emailSession.getStore();
@@ -73,25 +71,20 @@ public final class MailReceiveClient {
     }
 
     private List<Mail> getNewMails(Folder emailFolder) throws MessagingException {
-        List<Mail> mails =
-                Arrays.stream(emailFolder.getMessages())
-                        .filter(
-                                it -> {
-                                    try {
-                                        return !it.getFlags().contains(Flags.Flag.SEEN);
-                                    } catch (MessagingException e) {
-                                        e.printStackTrace();
-                                    }
-                                    return false;
-                                })
-                        .map(MailMapper::map)
-                        .collect(Collectors.toList());
-        emailFolder.setFlags(1, emailFolder.getMessageCount(), new Flags(Flags.Flag.SEEN), true);
+        List<Mail> mails = new ArrayList<>();
+        for (Message message : emailFolder.getMessages()) {
+            if (!message.getFlags().contains(Flags.Flag.SEEN)) {
+                message.setFlags(new Flags(Flags.Flag.SEEN), true);
+                Mail mail = MailMapper.map(message, user);
+                mails.add(mail);
+            }
+        }
         return mails;
     }
 }
 {% endhighlight %}
 
+The class can also be found on [GitHub](https://github.com/JensKnipper/greenmail-example/blob/main/src/main/java/de/jensknipper/greenmailexample/control/mail/receive/MailReceiveClient.java).
 
 The error handling is just an example how it could be done. Depending on your needs you might want to use a more sophisticated one.
 
@@ -217,7 +210,7 @@ An example for IMAP might look something like this:
 And for POP3 like this:  
 `new MailReceiveClient("pop3", "localhost", "110", "user", "password");`
 
-You could also use Spring to create a bean using the `Component` annotation and set the constructor's parameters via properties using the `Value` annotation. This is the way I am doing it in my [demo project](https://github.com/JensKnipper/greenmail-example/blob/main/src/main/java/de/jensknipper/greenmailexample/control/mail/receive/MailReceiveClient.java).
+You could also use Spring to create a bean using the `Component` annotation and set the constructor's parameters via properties using the `Value` annotation. This is the way I am doing it in my [demo project](https://github.com/JensKnipper/greenmail-example).
 
 If you do not know how to easily start up a local (mock) mailserver you can use GreenMail to do that. I have written an article how to [integrate it into you local environment](../greenmail-mock-mail-server-dev-setup/).
 
