@@ -2,25 +2,26 @@
 layout: post
 title: Receiving mails in Java with IMAP or POP3
 author: jens_knipper
-date: '9999-06-30 01:00:00'
+date: '2022-05-30 01:00:00'
 description: I was recently in need to write some small demo project which was receiving and processing mails. There is a lot of documentation for receiving mails, but gathering information about the sending part is less easy.
 categories: Java, Mail, IMAP, POP3
 ---
-This example shows you how to receive mails in Java either using the IMAP or the POP3 protocol. Received mails will be set to read, which means that you will only receive the latest ones.
-I will also give some hints about how to handle incoming mails concerning application security. Remember to alwalys sanitize user inputs. 
+This example shows you how to receive mails in Java either using the IMAP or the POP3 protocol.
+The SSL encrypted variants IMAPS and POP3S are also supported. 
+Received mails will be set to read, which means that you will only receive the latest ones.
+I will also give some hints about how to handle incoming mails concerning application security.
+ Remember to alwalys sanitize user inputs. 
 
 ## Receiving mails
 
---TODO split up and explain code
+You need to use to the following import statement `import javax.mail.*;` to be able to connect mail servers.
+The constructor of the client is straightforward. 
+It is simply used to pass and store some values into fields, which are then used later on.
+We are interested in the protocol, host, port user and password.
+Valid values for the protocol are imap, imaps, pop3 and pop3s.
 
 {% highlight java %}
-import javax.mail.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-
 public final class MailReceiveClient {
-
     private final String protocol;
     private final String host;
     private final String port;
@@ -34,7 +35,21 @@ public final class MailReceiveClient {
         this.user = user;
         this.password = password;
     }
+{% endhighlight %}
 
+We use the following code sample to connect to the mail server.
+First we have to create new properties and add values with the defined protocol, host and port.
+We use these properties to create a Session.
+With this session we can create a Store and connect to the server using the given username and password.  
+Afterwards we get the inbox folder and open it in read write mode. 
+Inbox usually is the default folder.
+If you want to get a different one, just change this string.
+The folder is opened also in write mode to mark mails as read.
+We pass this folder into the `getNewMails` method to receive the latest mails.  
+There is some wrapping of exceptions into runtime exceptions in the end.
+Folder and Store also have to be disconnected in the end.
+
+{% highlight java %}
     public List<Mail> receive() {
         Store emailStore = null;
         Folder emailFolder = null;
@@ -69,7 +84,18 @@ public final class MailReceiveClient {
             }
         }
     }
+{% endhighlight %}
 
+The `getNewMails` method gets all the messages in the folder.
+An if condition is used to only process unseen messages.
+Afterwards the message is set to seen.
+Keep in mind that no data is beeing deleted.
+When processing big volumes of mails your folder gets bigger quite fast.
+You might want to delete messages to keep the mail processing short.
+The code uses a for loop to avoid race conditions.
+In case there are multiple mail clients connected mails are not processed multiple times.
+
+{% highlight java %}
     private List<Mail> getNewMails(Folder emailFolder) throws MessagingException {
         List<Mail> mails = new ArrayList<>();
         for (Message message : emailFolder.getMessages()) {
