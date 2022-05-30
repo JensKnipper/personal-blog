@@ -94,6 +94,7 @@ When processing big volumes of mails your folder gets bigger quite fast.
 You might want to delete messages to keep the mail processing short.
 The code uses a for loop to avoid race conditions.
 In case there are multiple mail clients connected mails are not processed multiple times.
+A mapping to an internal class is needed, because an exception is thrown as soon as you try to access a message who's session has been closed. Another reason is the sanitizing of user inputs. You can read more about this in the next chapter.
 
 {% highlight java %}
     private List<Mail> getNewMails(Folder emailFolder) throws MessagingException {
