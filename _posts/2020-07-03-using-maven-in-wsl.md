@@ -3,7 +3,7 @@ layout: post
 title: Using Maven on Windows with the Linux subsystem
 author: jens_knipper
 date: '2020-07-03 01:00:00'
-last_modified_at: '2021-07-12 01:00:00'
+last_modified_at: '2022-05-30 01:00:00'
 description: Installing and configuring Maven on Windows does not have to be a pain anymore. Thanks to the WSL it becomes almost as straightforward as using Linux. Although depending on your use case there might be some restrictions.
 categories: Windows, Linux, WSL, Maven, IntelliJ
 ---
@@ -33,5 +33,11 @@ Be aware that the command is not boot safe and out of the box it is only working
 ## Going full Linux with X-Server
 Probably the most sustainable, but also elaborate workaround is [installing an X-Server and accessing it from Windows](https://github.com/lackovic/notes/tree/master/Windows/Windows%20Subsystem%20for%20Linux#run-a-linux-gui-application-in-wsl-2). It is actually the one I can recommend most. There may also be a follow up article covering this topic.
 
+## WSLg
+Probably the best approach is using the new [WSL GUI](https://github.com/microsoft/wslg). 
+It uses X11 and RDP in the background and enables using your fully fledged IDE in your WSL.
+The integration into the desktop is seamless and easy to use.
+The only downside is that it is only supported for Windows 11.
+
 ## Conclusion
-You can really ease your development processon Windows by using WSL. In most cases simple workarounds can be applied to make the integration of the two Operating Systems more seamless. When using a more complex development setup the effort of installing an X-Server may be worth it to get the full Linux experience. 
+You can really ease your development processon Windows by using WSL. In most cases simple workarounds can be applied to make the integration of the two operating systems more seamless. When using a more complex development setup the effort of installing an X-Server may be worth it to get the full Linux experience. For Windows 11 users using WSLg is probably the easiest and best integrated solution.
