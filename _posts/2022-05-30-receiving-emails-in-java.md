@@ -243,6 +243,6 @@ If you do not know how to easily start up a local (mock) mailserver you can use 
 
 ## Testing
 
-There is quite some logic in this piece of code apart from the connection to the server. Things that should get tested. I recently held a [presentation at a meetup about testing mails](./openvalue-meetup-greenmail-talk). You can use this resource to get started. Along to the repo I wrote a test for this class, which you can check out on [GitHub](https://github.com/JensKnipper/greenmail-example/blob/main/src/test/java/de/jensknipper/greenmailexample/control/mail/receive/MailReceiveClientTest.java). There might also be a follow up article in the future about testing emails in Java.
+There is quite some logic in this piece of code apart from the connection to the server. Things that should get tested. I recently held a [presentation at a meetup about testing mails](../openvalue-meetup-greenmail-talk). You can use this resource to get started. Along to the repo I wrote a test for this class, which you can check out on [GitHub](https://github.com/JensKnipper/greenmail-example/blob/main/src/test/java/de/jensknipper/greenmailexample/control/mail/receive/MailReceiveClientTest.java). There might also be a follow up article in the future about testing emails in Java.
 
 As always full source code is available on [GitHub](https://github.com/JensKnipper/greenmail-example/blob/main/src/main/java/de/jensknipper/greenmailexample/control/mail/receive/MailReceiveClient.java).
