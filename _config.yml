@@ -1,7 +1,7 @@
 title: Jens Knipper
 description: Developer blog of Jens Knipper. Covering stories about software development, DevOps and Indie Hacking.
 
-url: "https://blog.jensknipper.de"
+url: "https://jensknipper.de"
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
@@ -9,10 +9,11 @@ logo: /icons/icon.png
 
 markdown: kramdown
 highlighter: rouge
-plugins: [jekyll-paginate]
 paginate: 5
 
 netlifycms: true
+
+analytics: true
 
 # Compress CSS
 sass:
@@ -29,8 +30,6 @@ navigation:
 
 social:
   github: JensKnipper
-
-google_analytics: ""
 
 plugins:
   - jekyll-sitemap
