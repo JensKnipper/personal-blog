@@ -3,14 +3,14 @@ layout: post
 title: Receiving mails in Java with IMAP or POP3
 author: jens_knipper
 date: '2022-05-30 01:00:00'
-description: I was recently in need to write some small demo project which was receiving and processing mails. There is a lot of documentation for receiving mails, but gathering information about the sending part is less easy.
+description: I was recently in need to write some small demo project which was receiving and processing mails. There is a lot of documentation for receiving mails, but gathering information about the sending and processing part is less easy.
 categories: Java, Mail, IMAP, POP3
 ---
 This example shows you how to receive mails in Java either using the IMAP or the POP3 protocol.
 The SSL encrypted variants IMAPS and POP3S are also supported. 
 Received mails will be set to read, which means that you will only receive the latest ones.
-I will also give some hints about how to handle incoming mails concerning application security.
- Remember to alwalys sanitize user inputs. 
+I will also give some hints about how to handle incoming mails concerning application security. 
+Remember to alwalys sanitize user inputs. 
 
 ## Receiving mails
 
@@ -91,7 +91,7 @@ An if condition is used to only process unseen messages.
 Afterwards the message is set to seen.
 Keep in mind that no data is beeing deleted.
 When processing big volumes of mails your folder gets bigger quite fast.
-You might want to delete messages to keep the mail processing short.
+You might want to delete messages, instead of marking them as read, to keep the mail processing short.
 The code uses a for loop to avoid race conditions.
 In case there are multiple mail clients connected mails are not processed multiple times.
 A mapping to an internal class is needed, because an exception is thrown as soon as you try to access a message who's session has been closed. Another reason is the sanitizing of user inputs. You can read more about this in the next chapter.

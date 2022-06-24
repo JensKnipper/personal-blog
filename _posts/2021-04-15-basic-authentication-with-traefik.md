@@ -37,7 +37,10 @@ To keep it simple we use the `whoami` image from _containous_, the company behin
 We set it up to hook to the just specified entrypoint and tell it to listen to the domain `whoami.localhost`.
 This way we can easily access it locally.
 
-To secure this service you have to add a middleware of type `auth`. With another label we can add basic authentication and specify user credentials. Username and password are separated by a simple colon. You can add multiple users by separating them via semicolon.
+To secure this service you have to add a middleware called `auth`. 
+With another label we can add basic authentication and specify user credentials. 
+Username and password are separated by a simple colon. 
+You can add multiple users by separating them via semicolon.
 
 For password creation have a look at the next chapter.
 
@@ -54,13 +57,13 @@ For password creation have a look at the next chapter.
 This example resolves to the credentials with both username and password `test`.
 
 If you now start the services with `docker-compose up` and navigate to `whoami.localhost` you will be prompted to type in the credentials.
-After successfull login you should be able to access the containers content.
+After successfull login you should be able to access the container's content.
 
 ### Password hashing
 
 Traefik supports different hash algorithms to secure your services. 
 Most of these hash algorithms like MD5 or SHA-1 are considered unsafe and not recommended for production use.
-That is why you should stick to [brypt](https://auth0.com/blog/hashing-in-action-understanding-bcrypt/).
+That is why you should stick to [bcrypt](https://auth0.com/blog/hashing-in-action-understanding-bcrypt/).
 
 To create a hashed passphrase you can make use of an [online generator](https://bcrypt-generator.com/).
 Twelve is the default number of rounds for bcrypt, though Traefik is able to handle any number of rounds. 

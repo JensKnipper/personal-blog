@@ -9,7 +9,7 @@ categories: Linux, SSH
 `Permissions 0644 for '/home/<user>/.ssh/id_rsa' are too open.`
 
 Windows obviously does not set the proper access rights to the files when copying them.
-Following an article from stackoverflow I simply set the access rights of all the files to `600`.
+Following an article from stackoverflow I simply set the access rights of all the files in the .ssh folder to `600`.
 This solves the issue but is actually not better, because each file has it's own permission for a reason.
 Some files are read only for security reasons, some are even changed by your ssh client and need a different permission due to that.
 
