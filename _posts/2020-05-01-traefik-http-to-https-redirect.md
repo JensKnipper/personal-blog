@@ -94,7 +94,9 @@ Type in the urls `http://whoami.localhost` and `https://whoami.localhost` and yo
 {% endhighlight %}
 
 For testing purposes we can add another container which only listens to the HTTP port.  
-Type in the url `http://whoami.localhost`. It should not redirect to HTTPS. Accessing in the url `https://whoami.localhost` will cause a 404 error, because no entrypoint is defined and the page cannot be found.
+Type in the url `http://whoami2.localhost`. 
+It should not redirect to HTTPS. 
+Accessing in the url `https://whoami2.localhost` will cause a 404 error, because no entrypoint is defined and the page cannot be found.
 
 {% highlight yaml %}
   whoami2:
