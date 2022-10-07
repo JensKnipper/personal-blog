@@ -13,5 +13,8 @@ There is not much information out there about it and a lot of things you might f
 That is why the talk will deal with the local testing of AWS serverless lambdas. 
 In the end I hope to make lots of developer's life easier by providing a useful resource about testing. 
 
+The newcomer program is a nice concept where young speakers will be provided an experienced speaker as a mentor. 
+The mentor will give them useful feedback on creating an abstract, slides and speaking in general. 
+
 Before entering the big stage at [JavaLand](https://www.javaland.eu), I intend to practice as much as possible on smaller stages. 
 The first chance will be a meetup of my employer [OpenValue](https://openvalue.eu) in November. 
