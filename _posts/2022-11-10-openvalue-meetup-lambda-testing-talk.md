@@ -11,7 +11,6 @@ I really enjoyed the evening and the opportunity to speak at the [meetup](https:
 
 ## Abstract
 
-Local testing of AWS serverless lambda functions
 There are a lot of resources and best practices about testing of microservices. 
 Serverless functions like AWS Lambdas are still mostly tested manually after a deployment, especially concerning logic provided by AWS. Though it is possible to start the application locally and even test it. But how does it work for a (relatively) closed system like the AWS cloud? 
 Through smart usage of LocalStack, TestContainers and the AWS SDK it is possible to automatically execute component tests and uncover possible errors in the usage of the lambda function. 
