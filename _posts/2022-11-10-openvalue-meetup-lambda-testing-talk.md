@@ -7,7 +7,7 @@ date: '2022-11-10 01:00:00'
 description: Last week I hold my talk "Local testing of AWS serverless lambda functions" at a virtual meetup of OpenValue. In this post, you can find the slides and the recording of my talk.
 categories: Java, GreenMail, Talk
 ---
-I really enjoyed the evening and the opportunity to speak at the [meetup](https://www.meetup.com/OpenValue/events/278102326/) from [OpenValue](https://www.openvalue.eu), thank you very much. Special thanks to [Sebastian Konieczek](https://twitter.com/the_real_sko) for organizing the meetups.  
+I really enjoyed the evening and the opportunity to speak at the [meetup](https://www.meetup.com/openvalue-dusseldorf/events/289041593/) from [OpenValue](https://www.openvalue.eu), thank you very much. Special thanks to [Sebastian Konieczek](https://twitter.com/the_real_sko) for organizing the meetups.  
 
 ## Abstract
 
