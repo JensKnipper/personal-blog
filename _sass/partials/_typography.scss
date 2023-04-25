@@ -92,7 +92,9 @@ blockquote {
 
 @media (min-width: 43.75em) {
   blockquote {
-    font-size: 1.5em; // 24px / 16px
-    line-height: 1.45833333; // 35px / 24px
+    font-size: 0.75em; // 24px / 16px
+    line-height: 1; // 35px / 24px
+    font-style: italic;
+    text-align: justify;
   }
 }
