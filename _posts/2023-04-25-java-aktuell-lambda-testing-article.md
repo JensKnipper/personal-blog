@@ -3,7 +3,7 @@ layout: post
 title: Artikel "Lokales Testen von AWS Serverless Lambda-Funktionen" in der Java Aktuell 03-2023
 image: /assets/img/cover-java-aktuell-2023-03.png
 author: jens_knipper
-date: '2023-04-21 01:00:00'
+date: '2023-04-25 01:00:00'
 description: Nachdem ich über das Thema auf der JavaLand einen Talk gehalten habe, habe ich die Chance bekommen das Ganze in Form eines Artikels in einer Zeitschrift zu veröffentlichen.
 categories: Java, Java Aktuell, Article
 lang: de_DE
