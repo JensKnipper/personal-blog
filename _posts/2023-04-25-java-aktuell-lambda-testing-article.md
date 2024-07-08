@@ -16,4 +16,4 @@ Bei Serverless Functions wie AWS-Lambdas wird meist nur manuell nach einem Deplo
 Durch den geschickten Einsatz von LocalStack, Testcontainers und dem AWS-SDK ist es unter anderem möglich, Component-Tests automatisiert auszuführen und etwaige Fehler in der Benutzung der Lambda-Funktion aufzudecken.
 
 Der ganze Artikel ist hier zu finden:
-[Download](https://www.ijug.eu/fileadmin/Daten/Zeitschriften/Java_aktuell/2023/03-2023-Java_aktuell-WEB.pdf#page=14)
+[Download](/assets/img/03-2023-Java_aktuell-WEB.pdf)
