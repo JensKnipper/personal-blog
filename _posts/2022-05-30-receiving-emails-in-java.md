@@ -3,7 +3,7 @@ layout: post
 title: Receiving mails in Java with IMAP or POP3
 author: jens_knipper
 date: '2022-05-30 01:00:00'
-last_modified_at: '2025-01-14 00:00:00'
+last_modified_at: '2025-01-23 00:00:00'
 description: I was recently in need to write some small demo project which was receiving and processing mails. There is a lot of documentation for sending mails, but gathering information about the receiving and processing part is less easy.
 categories: Java, Mail, IMAP, POP3
 ---
@@ -180,3 +180,9 @@ If you do not know how to easily start up a local (mock) mail server you can use
 There is quite some logic in this piece of code apart from the connection to the server. Things you should test! I recently held a [presentation at a meetup about testing mails](../openvalue-meetup-greenmail-talk). You can use this resource to get started. Along to the repo I wrote a test for this class, which you can check out on [GitHub](https://github.com/JensKnipper/greenmail-example/blob/main/src/test/java/de/jensknipper/greenmailexample/control/mail/receive/MailReceiveClientTest.java). There might also be a follow up article in the future about testing emails in Java.
 
 As always full source code is available on [GitHub](https://github.com/JensKnipper/greenmail-example/blob/main/src/main/java/de/jensknipper/greenmailexample/control/mail/receive/MailReceiveClient.java).
+
+## Other solutions
+The code feels a little low level, quite close to the protocol even. If you do not like that, taking a look at what your framework of choice might offer is worth a try.  
+Of course there are pros and cons for either usage. By using something from a framework you give up on control, but rely on their testing and maturity.
+
+For example Spring offers an [integration](https://docs.spring.io/spring-integration/reference/mail.html) which you can use. Of course this comes with the regular downsides of it. You cannot test your integration without starting the whole spring context, which might slow down the tests.
