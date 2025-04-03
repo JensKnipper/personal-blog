@@ -53,16 +53,16 @@ deploy_pages:
 ```
 
 An explanation of the [attributes](https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-ref/) used can be found below:
-* `--attribute data-uri`: graphics as data-uri; self contained file
-* `--attribute toc=left`: display table of contents on left side
-* `--attribute sectnums`: display section numbers
-* `--attribute reproducible`: no last updated timestamp
-* `--attribute icons=font`: use font based icons
-* `--attribute source-highlighter=Pygments`: set syntax highlighter
-* `--attribute experimental`: add UI elements for buttons and key bindings
-* `--require asciidoctor-diagram`: load diagram library to use diagrams
-* `--destination-dir public`: set `public` as output folder
-* `--source-dir src 'doc/**/*.adoc'`: define input files
+* **`--attribute data-uri`**: graphics as data-uri; self contained file
+* **`--attribute toc=left`**: display table of contents on left side
+* **`--attribute sectnums`**: display section numbers
+* **`--attribute reproducible`**: no last updated timestamp
+* **`--attribute icons=font`**: use font based icons
+* **`--attribute source-highlighter=Pygments`**: set syntax highlighter
+* **`--attribute experimental`**: add UI elements for buttons and key bindings
+* **`--require asciidoctor-diagram`**: load diagram library to use diagrams
+* **`--destination-dir public`**: set `public` as output folder
+* **`--source-dir src 'doc/**/*.adoc'`**: define input files
 
 To keep our build times as few, and as short as possible we only want to deploy new pages when something changes on the main branch.  
 We can even optimize this further by telling GitLab to only run the generation if the documentation itself changes or if something in the process specification changes.
@@ -74,7 +74,7 @@ The process is defined to take all `.adoc` files and generate pages from them. S
 We name it index, so that an `index.html` page is generated, which will automatically be displayed when you visit the URL of your pages.  
 An example might look like this:
 
-```
+```asciidoc
 = Your documentation
 
 This is your documentation
