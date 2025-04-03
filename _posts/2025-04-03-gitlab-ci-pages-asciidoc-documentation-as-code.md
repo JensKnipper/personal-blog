@@ -6,25 +6,25 @@ date: '2025-04-03 01:00:00'
 description: Writing documentation should be as low-key as possible to remove the pain from the process. One way to achieve this is through Documentation as Code. Setting it up and configuring it may take some time, but once it's done, you can focus on creating the content itself.
 categories: Gitlab CI, Gitlab Pages, AsciiDoc
 ---
-As a developer I love good documentation, but writing documentation myself is often cumbersome and does not feel rewarding, especially if no one reads or uses it. The reason: documentation spread over multiple tools where no one actually knows where to find it. 
+As a developer, I appreciate good documentation, but writing it myself is often cumbersome and feels unrewarding — especially when no one reads or uses it. The reason: documentation spread across multiple tools, with no clear way to find it.
 
-The solution is using Documentation As Code. In projects where you use GitLab anyway you can write your documentation along your code in AsciiDoc, generate it to HTML using AsciiDoctor in Gitlab CI and publish it to Gitlab Pages for everyone to read.
+The solution is to use Documentation as Code. In projects where you are already using GitLab, you can write your documentation alongside your code in AsciiDoc, generate it as HTML using AsciiDoctor in GitLab CI, and publish it to GitLab Pages for everyone to read.
 
 ## GitLab Pages
 
-To tell GitLab that you want to upload static content and publish it as a website, the [`pages` attribute](https://docs.gitlab.com/ci/yaml/#pages) is used.  
-After setting this attribute's value to `true`, all the content in the `public` folder is published as Gitlab Pages.
+To tell GitLab that you want to upload static content and publish it as a website, use the [`pages` attribute](https://docs.gitlab.com/ci/yaml/#pages).  
+After setting this attribute's value to `true`, all the content in the `public` folder is published as GitLab Pages.
 
-Each time you generate the pipeline the public folder will be empty again, so you don't have to care about cleaning up old pages. Just fill it and only the latest pages generated will be uploaded.
+Each time you run the pipeline, the `public` folder will be cleared, so you don't have to worry about cleaning up old pages. Just fill the folder, and only the latest pages generated will be uploaded.
 
 ## GitLab CI
 
-To setup a pipeline you need to make changes to the `.gitlab-ci.yml` file located in the root of your repository. The setup is fairly simple. Just make the necessary changes, commit and push them and your page is set up. 
-As described before you need to set the `pages` attribute.  
-To create html pages from AsciiDoc we take the [AsciiDoctor docker image](https://github.com/asciidoctor/docker-asciidoctor). Using it makes the [AsciiDoctor CLI](https://docs.asciidoctor.org/asciidoctor/latest/cli/man1/asciidoctor/) available.  
-We use it in the `scripts` part.
+To set up the pipeline, you need to modify the `.gitlab-ci.yml` file located at the root of your repository. The setup is fairly simple — just make the necessary changes, commit, push, and your page is ready.  
+As mentioned earlier, you need to set the `pages` attribute.  
+To generate HTML pages from AsciiDoc, we use the [AsciiDoctor docker image](https://github.com/asciidoctor/docker-asciidoctor). This makes the [AsciiDoctor CLI](https://docs.asciidoctor.org/asciidoctor/latest/cli/man1/asciidoctor/) available.  
+We use it in the `scripts` section int the following code block.
 
-```
+```yaml
 stages:
   - deploy
 
@@ -61,17 +61,17 @@ An explanation of the [attributes](https://docs.asciidoctor.org/asciidoc/latest/
 * `--attribute source-highlighter=Pygments`: set syntax highlighter
 * `--attribute experimental`: add UI elements for buttons and key bindings
 * `--require asciidoctor-diagram`: load diagram library to use diagrams
-* `--destination-dir public`: set 'public' as output folder
+* `--destination-dir public`: set `public` as output folder
 * `--source-dir src 'doc/**/*.adoc'`: define input files
 
-To keep our build times as few, and as short as possible we only want to deploy new pages in case something changes on the main branch.  
-We can even optimize it further and tell GitLab to only run the generation if the documentation itself changes or something in the process specification.  
-These are specified in the `rules` section of the `deploy_pages` job.
+To keep our build times as few, and as short as possible we only want to deploy new pages when something changes on the main branch.  
+We can even optimize this further by telling GitLab to only run the generation if the documentation itself changes or if something in the process specification changes.
+These conditions are specified in the `rules` section of the `deploy_pages` job.
 
 ## Generating pages
 
-The process is defined to take all `.adoc` files to and generate pages from it. So let's create a file named `index.adoc` in the `doc` folder.  
-We name it index, so an `index.html` page is generated which will automatically be called once you call URL of your pages.  
+The process is defined to take all `.adoc` files and generate pages from them. So, let's create a file named `index.adoc` in the `doc` folder.  
+We name it index, so that an `index.html` page is generated, which will automatically be displayed when you visit the URL of your pages.  
 An example might look like this:
 
 ```
@@ -106,9 +106,9 @@ void main() {
 
 ## Results
 
-After committing and pushing your file the pipeline will run. As soon as the pipeline finished (you can watch it in Gitlab in `Build > Pipelines`) you can find the link to your pages website at `Deploy > Pages`.  
+After committing and pushing your file, the pipeline will run. As soon as the pipeline finishes (you can watch it in Gitlab under `Build > Pipelines`) you can find the link to your Pages website at `Deploy > Pages`.  
 The result should look like this:
 ![Generation Results](/assets/img/gitlab-asciidoc-documentation-as-code-result.png)
-If you want to take a closer look at the generated page, you can go to the [pages I generated](https://gitlab-asciidoc-documentation-as-code-352c33.gitlab.io/).
+If you want to take a closer look at the generated page, you can visit the [Pages I generated](https://gitlab-asciidoc-documentation-as-code-352c33.gitlab.io/).
 
-You can see the whole code on [GitLab](https://gitlab.com/jensknipper/gitlab-asciidoc-documentation-as-code). Feel free to copy it and adjust it to your own needs.
+You can see the full code on [GitLab](https://gitlab.com/jensknipper/gitlab-asciidoc-documentation-as-code). Feel free to copy it and adjust it to your own needs.
