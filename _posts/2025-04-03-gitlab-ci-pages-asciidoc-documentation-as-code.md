@@ -1,5 +1,6 @@
 ---
 layout: post
+image: /assets/img/gitlab-asciidoc-documentation-as-code-result.png
 title: Documentation as Code with AsciiDoctor, GitLab CI, and GitLab Pages
 author: jens_knipper
 date: '2025-04-03 01:00:00'
