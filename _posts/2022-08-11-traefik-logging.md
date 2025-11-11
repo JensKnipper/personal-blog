@@ -3,6 +3,7 @@ layout: post
 title: Enable logging in Traefik
 author: jens_knipper
 date: '2022-08-11 01:00:00'
+last_modified_at: '2025-11-11 01:00:00'
 description: In this article I will show you how to activate logging in Traefik. There are two kinds of logs in Traefik, the general log and the access log. We will have a look at both of them and take a deeper look into the possibilities they provide.
 categories: traefik, docker, docker-compose, redirect
 ---
@@ -88,9 +89,9 @@ A volume has to be defined to persist the file.
 
 {% highlight yaml %}
   traefik:
-    image: "traefik:v2.2"
+    image: traefik:v3.5
     command:
-      - "--providers.docker"
+      - "--providers.docker=true"
       - "--log.level=DEBUG"
       - "--log.filePath=/logs/traefik.log" 
     volumes:
@@ -111,11 +112,10 @@ You also need a service, accessible through Traefik, to see this behaviour.
 
 {% highlight yaml %}
   traefik:
-    image: "traefik:v2.2"
+    image: traefik:v3.5
     command:
-      - "--providers.docker"
+      - "--providers.docker=true"
       - "--entrypoints.web.address=:80"
-      - "--accesslog=true"
       - "--accesslog.filePath=/logs/access.log"
     ports:
       - "80:80"
@@ -124,7 +124,7 @@ You also need a service, accessible through Traefik, to see this behaviour.
       - ./logs/:/logs/
 
   whoami:
-    image: containous/whoami
+    image: traefik/whoami
     labels:
       - "traefik.http.routers.whoami.entrypoints=web"
       - "traefik.http.routers.whoami.rule=Host(`whoami.localhost`)"

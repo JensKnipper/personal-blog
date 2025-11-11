@@ -3,6 +3,7 @@ layout: post
 title: Adding basic authentication to secure a service with Traefik
 author: jens_knipper
 date: '2021-04-15 01:00:00'
+last_modified_at: '2025-11-11 01:00:00'
 description: Adding authentication to a service that does not support it by default can be done easily by using Traefik. This way you gain an additional layer of security and you can leverage other features of Traefik like domain names. 
 categories: traefik, docker, docker-compose, authentication
 ---
@@ -20,9 +21,9 @@ All incoming traffic is now routed through this specific entrypoint.
 
 {% highlight yaml %}
   traefik:
-    image: traefik:v2.2
+    image: traefik:v3.5
     command:
-      - "--providers.docker"
+      - "--providers.docker=true"
       - "--entrypoints.web.address=:80"
     ports:
       - "80:80"
@@ -46,12 +47,12 @@ For password creation have a look at the next chapter.
 
 {% highlight yaml %}
   whoami:
-    image: containous/whoami
+    image: traefik/whoami
     labels:
       - "traefik.http.routers.whoami.entrypoints=web"
       - "traefik.http.routers.whoami.rule=Host(`whoami.localhost`)"
       - "traefik.http.routers.whoami.middlewares=auth"
-      - "traefik.http.middlewares.auth.basicauth.users=test:$$2y$$12$$ci.4U63YX83CwkyUrjqxAucnmi2xXOIlEF6T/KdP9824f1Rf1iyNG"
+      - "traefik.http.middlewares.auth.basicAuth.users=test:$$2y$$12$$ci.4U63YX83CwkyUrjqxAucnmi2xXOIlEF6T/KdP9824f1Rf1iyNG"
 {% endhighlight %}
 
 This example resolves to the credentials with both username and password `test`.

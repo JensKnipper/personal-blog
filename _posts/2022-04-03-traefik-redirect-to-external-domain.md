@@ -35,9 +35,9 @@ Depending on your use case you might want to set it to `permanent` (HTTP Code 30
 
 {% highlight yaml %}
   traefik:
-    image: traefik:v2.2
+    image: traefik:v3.5
     command:
-      - "--providers.docker"
+      - "--providers.docker=true"
       - "--entrypoints.web.address=:80"
     ports:
       - "80:80"
@@ -47,9 +47,9 @@ Depending on your use case you might want to set it to `permanent` (HTTP Code 30
       - "traefik.http.routers.redirect-router.entrypoints=web"
       - "traefik.http.routers.redirect-router.rule=Host(`redirect.localhost`)"
       - "traefik.http.routers.redirect-router.middlewares=redirect-regex"
-      - "traefik.http.middlewares.redirect-regex.redirectregex.regex=(.)*"
-      - "traefik.http.middlewares.redirect-regex.redirectregex.replacement=https://jensknipper.de"
-      - "traefik.http.middlewares.redirect-regex.redirectregex.permanent=false"
+      - "traefik.http.middlewares.redirect-regex.redirectRegex.regex=(.)*"
+      - "traefik.http.middlewares.redirect-regex.redirectRegex.replacement=https://jensknipper.de"
+      - "traefik.http.middlewares.redirect-regex.redirectRegex.permanent=false"
 {% endhighlight %}
 
 You should be aware that multiple levels of redirects do not work.

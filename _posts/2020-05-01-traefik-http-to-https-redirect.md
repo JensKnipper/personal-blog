@@ -3,7 +3,7 @@ layout: post
 title: HTTP to HTTPS redirects with Traefik
 author: jens_knipper
 date: '2020-05-01 12:00:00'
-last_modified_at: '2021-07-12 01:00:00'
+last_modified_at: '2025-11-11 01:00:00'
 description: This article covers the basic examples how to redirect HTTP-requests to HTTPS. This can be achieved per domain, for a single application only or globally for all containers.
 categories: traefik, docker, docker-compose, http, https, ssl
 ---
@@ -21,9 +21,9 @@ This results in all traffic coming in at port `80` being redirected to port `443
 
 {% highlight yaml %}
   traefik:
-    image: traefik:v2.2
+    image: traefik:v3.5
     command:
-      - "--providers.docker"
+      - "--providers.docker=true"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
       - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
@@ -43,7 +43,7 @@ Type in the urls `http://whoami.localhost` and `https://whoami.localhost` and yo
 
 {% highlight yaml %}
   whoami:
-    image: containous/whoami
+    image: traefik/whoami
     labels:
       - "traefik.http.routers.whoami.entrypoints=websecure"
       - "traefik.http.routers.whoami.rule=Host(`whoami.localhost`)"
@@ -63,9 +63,9 @@ All the services can now be accessed via HTTP and HTTPS.
 
 {% highlight yaml %}
   traefik:
-    image: traefik:v2.2
+    image: traefik:v3.5
     command:
-      - "--providers.docker"
+      - "--providers.docker=true"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
     ports:
@@ -87,7 +87,7 @@ Type in the urls `http://whoami.localhost` and `https://whoami.localhost` and yo
       - "traefik.http.routers.whoami-http.entrypoints=web"
       - "traefik.http.routers.whoami-http.rule=Host(`whoami.localhost`)"
       - "traefik.http.routers.whoami-http.middlewares=whoami-https"
-      - "traefik.http.middlewares.whoami-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.whoami-https.redirectScheme.scheme=https"
       - "traefik.http.routers.whoami.entrypoints=websecure"
       - "traefik.http.routers.whoami.rule=Host(`whoami.localhost`)"
       - "traefik.http.routers.whoami.tls=true"
