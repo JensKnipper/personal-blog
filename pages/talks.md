@@ -15,7 +15,7 @@ The following list, though conferences only, is also on [Sessionize](https://ses
 | 16.09.2025 | Java Forum Nord 2025 | Demystifying Dependency Injection | [Conference](https://javaforumnord.de/2025/), [Slides](https://slides.com/jensknipper/dependency-injection) |
 | 29.05.2025 | MakeIT 2025 / JCON OpenBlend Slovenia 2025 | Demystifying Dependency Injection | [Conference](2025.makeit.si), [Slides](https://slides.com/jensknipper/dependency-injection) |
 | 22.05.2025 | OpenValue Meetup | Demystifying Dependency Injection | [Meetup](https://www.meetup.com/openvalue-dusseldorf/events/307560744), [Recording](https://www.youtube.com/watch?v=DDQ1JbMK7yk), [Slides](https://slides.com/jensknipper/dependency-injection) |
-| 30.04.2025 | Java User Group münster | Demystifying Dependency Injection | [Meetup](https://www.meetup.com/de-de/java-usergroup-munster/events/306322544), [Recording](https://www.youtube.com/watch?v=WbTUH-9VSRQ), [Slides](https://slides.com/jensknipper/dependency-injection) |
+| 30.04.2025 | Java User Group Münster | Demystifying Dependency Injection | [Meetup](https://www.meetup.com/de-de/java-usergroup-munster/events/306322544), [Recording](https://www.youtube.com/watch?v=WbTUH-9VSRQ), [Slides](https://slides.com/jensknipper/dependency-injection) |
 ||
 | **<u>2023</u>** |
 | 21.03.2023 | JavaLand 2023 | (Newcomer) Lokales Testen von AWS Serverless Lambda-Funktionen | [Conference](https://www.javaland.eu/de/javaland-2023/), [Slides](https://slides.com/jensknipper/testing-aws-lambdas) |
