@@ -41,7 +41,7 @@ By creating it, the service becomes responsible for its lifecycle. And if the re
 But this is not the only issue. We also introduce [tight coupling](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29) between these two classes.  
 It is not possible to test the `getActiveUsers` method independently of the `UserRepository`, even though the contract of the repository’s `findAll` method is clear. It returns a list, but I am not able to test `getActiveUsers` without it.
 
-Due to this coupling, a change in `UserRepository` might also cause tests for `UserService` to fail. For example, a change in the ordering of the returned list—even if ordering is not relevant to the test. In general, we do not want tests to fail when details we are not testing for change.
+Due to this coupling, a change in `UserRepository` might also cause tests for `UserService` to fail. For example, a change in the ordering of the returned list, even if ordering is not relevant to the test. In general, we do not want tests to fail when details we are not testing for, change.
 
 ## Solution
 
@@ -82,4 +82,4 @@ As we have seen, Dependency Injection enforces separation of concerns. The creat
 This enables us to test units in isolation.
 
 There are multiple ways to inject dependencies, which will be covered in another part of this series.  
-DI can also be implemented in different ways—either manually or with a framework. Frameworks may inject dependencies at compile time or at runtime. These topics will also be explored in future articles.
+DI can also be implemented in different ways, either manually or with a framework. Frameworks may inject dependencies at compile time or at runtime. These topics will also be explored in future articles.
