@@ -12,7 +12,7 @@ The following list, though conferences only, is also on [Sessionize](https://ses
 | **<u>2026</u>** |
 | 29.05.2026 | MakeIT 2026 / JCON OpenBlend Slovenia 2026 | JavaScript? No. Java Scripts! - Discover Java as a Scripting Language | [Conference](https://makeit.si) |
 | 20.05.2026 | Java User Group Münster | JavaScript? Nein. Java Scripts! - Scripting mit Java | [Meetup](https://www.meetup.com/de-de/java-usergroup-munster/events/314387539), [Slides](https://slides.com/jensknipper/java-scripting) |
-| 23.04.2025 | OpenValue Meetup | JavaScript? No. Java Scripts! - Scripting with Java | [Meetup](https://www.meetup.com/openvalue-dusseldorf/events/314072650), [Slides](https://slides.com/jensknipper/java-scripting) |
+| 23.04.2026 | OpenValue Meetup | JavaScript? No. Java Scripts! - Scripting with Java | [Meetup](https://www.meetup.com/openvalue-dusseldorf/events/314072650), [Slides](https://slides.com/jensknipper/java-scripting) |
 ||
 | **<u>2025</u>** |
 | 08.12.2025 | IT-Tage 2025 | Modern Java: Sprachfeatures von JDK 11 bis heute in der Praxis | [Conference](https://www.ittage.informatik-aktuell.de/konferenz/it-tage-2025.html), [Slides](https://slides.com/jensknipper/modern-java) |
