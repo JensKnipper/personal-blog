@@ -1,9 +1,9 @@
 [build]
-  command = "jekyll build"
-  publish = "_site"
+  command = "hugo build"
+  publish = "public"
 
 [build.environment]
-  JEKYLL_ENV = "production"
+  HUGO_ENV = "production"
 
 # REDIRECT and HEADERS examples.
 # Uncomment to use. Directives in this file will ALWAYS override any identical

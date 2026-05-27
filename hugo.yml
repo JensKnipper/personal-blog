@@ -1,0 +1,133 @@
+theme: PaperMod
+
+module:
+  imports:
+    path: 'github.com/adityatelange/hugo-PaperMod'
+
+baseURL: "https://jensknipper.de/"
+title: Jens Knipper
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Jens Knipper
+  description: "Developer blog of Jens Knipper. Covering stories about software development, DevOps and Indie Hacking."
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Jens Knipper
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: false
+  ShowLastMod: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  hideAuthor: true
+  showtoc: true
+  tocopen: true
+
+  mainSections:
+    - blog
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/icon/favicon.ico"
+    favicon16x16: "/icon/favicon-16x16.png"
+    favicon32x32: "/icon/favicon-32x32.png"
+    apple_touch_icon: "/icon/apple-touch-icon.png"
+    safari_pinned_tab: "/icon/safari-pinned-tab.svg"
+
+  label:
+    text: "Jens Knipper"
+    icon: /icon/icon.png
+    iconHeight: 35
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog! I am a software engineer who likes writing about programming and everything related.
+
+  socialIcons:
+    - name: bluesky
+      url: "https://bsky.app/profile/jensknipper.de"
+    - name: github
+      url: "https://github.com/JensKnipper"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/jens-knipper-87b4a717b/"
+    - name: xing
+      url: "https://www.xing.com/profile/Jens_Knipper"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  editPost:
+    disabled: true
+    URL: "https://github.com/JensKnipper/personal-blog/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: talks
+      name: Talks
+      url: /talks/
+      weight: 20
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 30
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+  goldmark:
+    renderer:
+      unsafe: true
+      
+ignoreLogs: ['warning-goldmark-raw-html']

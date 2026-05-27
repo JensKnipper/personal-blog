@@ -1,0 +1,16 @@
+span.email b {
+  display: none;
+}
+
+body > footer.footer:not(.custom-footer) {
+    display: none;
+}
+
+body > footer > span {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+article > footer {
+  text-align: left;
+}

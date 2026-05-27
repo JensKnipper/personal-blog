@@ -1,7 +1,0 @@
-# specify site authors in this file
-# you can add .yml files for any other global data in this folder
-
-jens_knipper:
-    name: Jens Knipper
-    email: mail@jensknipper.de
-    web: https://blog.jensknipper.de
