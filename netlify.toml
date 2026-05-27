@@ -4,6 +4,7 @@
 
 [build.environment]
   HUGO_ENV = "production"
+  HUGO_VERSION = "0.161.0"
 
 # REDIRECT and HEADERS examples.
 # Uncomment to use. Directives in this file will ALWAYS override any identical
