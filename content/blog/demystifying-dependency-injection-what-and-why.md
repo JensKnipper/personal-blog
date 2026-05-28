@@ -13,7 +13,7 @@ cover:
 
 Let’s first get everyone on the same page by explaining the basic concepts: **What is a dependency?**
 
-![Problem](/assets/img/dependency-injection-problem.png)
+![Problem](/img/dependency-injection-problem.png)
 
 We can explain this easily using the image above. What we see is a class `A` that uses methods of a class named `B`. This means `B` is a dependency of `A`.  
 Simple as that. But we are also introducing a problem here, because in this case `A` creates an instance of `B`.
@@ -71,7 +71,7 @@ This approach also solves the problem of tight coupling. Independent testing is 
 
 Because we changed the code, the diagram changes as well.
 
-![Solution](/assets/img/dependency-injection-solution.png)
+![Solution](/img/dependency-injection-solution.png)
 
 Class `A` still uses methods of class `B`, but this is now the only arrow in that direction. There is another component, `X`, that handles the creation and injection of dependencies. To use proper terminology going forward:
 `X` is the injector, `A` is the client, and `B` is the dependency.

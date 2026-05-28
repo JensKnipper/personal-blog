@@ -108,7 +108,7 @@ void main() {
 
 After committing and pushing your file, the pipeline will run. As soon as the pipeline finishes (you can watch it in Gitlab under `Build > Pipelines`) you can find the link to your Pages website at `Deploy > Pages`.  
 The result should look like this:
-![Generation Results](/assets/img/gitlab-asciidoc-documentation-as-code-result.png)
+![Generation Results](/img/gitlab-asciidoc-documentation-as-code-result.png)
 If you want to take a closer look at the generated page, you can visit the [Pages I generated](https://gitlab-asciidoc-documentation-as-code-352c33.gitlab.io/).
 
 You can see the full code on [GitLab](https://gitlab.com/jensknipper/gitlab-asciidoc-documentation-as-code). Feel free to copy it and adjust it to your own needs.

@@ -41,7 +41,7 @@ Simply set `localhost` as the host and specify the port you want to connect to i
 
 To test your mails locally you can either connect to a desktop client like Thunderbird or install a web client. You could also connect mobile mail clients by opening your ports to your local network.  
 When connecting to Thunderbird, make sure to configure the connection manually:
-![GreenMail Thunderbird settings](/assets/img/greenmail-thunderbird-settings.png)
+![GreenMail Thunderbird settings](/img/greenmail-thunderbird-settings.png)
 
 A simple but popular web client is [Roundcube](https://roundcube.net/). In this example running it in a docker container is also the simplest approach.
 
@@ -65,7 +65,7 @@ You can read mails using the IMAP or POP3 protocol. You just need to specify the
 GreenMail automatically accepts all incoming mails. If there is no corresponding address, one will automatically be created. The password is equal to the mail address.  
 
 In our example we browse to `localhost:8000` to use the webclient. If you want to use another port you can simply change the port in the compose specification. The result should look like this:
-![RoundCube login](/assets/img/greenmail-roundcube-login.png)
+![RoundCube login](/img/greenmail-roundcube-login.png)
 
 Because of this you should not make the GreenMail and Roundcube instances publicly available. If you still want to integrate it in your test or staging environment it is highly recommended to secure it with a reverse proxy like nginx or [Traefik](../basic-authentication-with-traefik).
 

@@ -23,7 +23,7 @@ So let's bring a little clarity into it.
 The Dependency Inversion Principle is frequently used in combination with Dependency Injection. Often, you can read that it is the same, but actually these are two different things.  
 Dependency Injection is just about the injection of the dependency, nothing more. When you combine it with the Dependency Inversion Principle, the client does not know which implementation of the dependency is used. This can be achieved e.g. by using an interface. Instead of depending of the actual implementation the client just expects the interface.
 
-![Dependency Inversion Principle](/assets/img/dependency-inversion-principle.png)
+![Dependency Inversion Principle](/img/dependency-inversion-principle.png)
 
 Using the DIP is great when you want to write a mock manually and pass it into the client. Another use case would be when you want to use a fake.
 A fake is similar to a mock, but instead of returning somewhat static values, you imitate the behaviour. I did that in customer projects and replaced a key value store like [Redis](https://redis.io/) with a HashMap in my tests. It made the tests really nice to use, because you don't have to take care of the behaviuor anymore. It is even reusable, so you could theoretically use it in all your tests. 
