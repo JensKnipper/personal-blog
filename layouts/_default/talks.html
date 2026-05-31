@@ -1,0 +1,79 @@
+{{ define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+
+<div class="post-content md-content">
+  <p>
+    This is a collection of talks and presentations I gave on Meetups and conferences.
+  </p>
+    <p>
+    The following list, though conferences only, is also on <a href="https://sessionize.com/jensknipper/">Sessionize</a>.
+  </p>
+
+  {{ $currentYear := "" }}
+
+  {{ range sort site.Data.talks "date" "desc" }}
+
+    <section>
+
+      {{ $year := dateFormat "2006" .date }}
+
+      {{ if ne $year $currentYear }}
+        <div class="archive-year">
+          <h2 class="archive-year-header">
+            {{ $year }}
+          </h2>
+        </div>
+
+        {{ $currentYear = $year }}
+      {{ end }}
+
+      <h3 class="archive-header-link">
+        {{ .event }}
+      </h3>
+
+      <div class="archive-meta">
+        {{ .location }}
+      </div>
+
+      <div class="talks-list">
+
+        {{ range .talks }}
+
+          <article class="talk-entry">
+
+            <div class="talk-title">
+              {{ .title }}
+            </div>
+
+            <div class="talk-links">
+              {{ with .event }}
+                <a href="{{ . }}" target="_blank">Event</a>
+              {{ end }}
+
+              {{ with .slides }}
+                <a href="{{ . }}" target="_blank">Slides</a>
+              {{ end }}
+
+              {{ with .video }}
+                <a href="{{ . }}" target="_blank">Video</a>
+              {{ end }}
+
+              {{ with .article }}
+                <a href="{{ . }}" target="_blank">Article</a>
+              {{ end }}
+            </div>
+
+          </article>
+
+        {{ end }}
+
+      </div>
+
+    </section>
+
+  {{ end }}
+</div>
+{{ end }}

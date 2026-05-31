@@ -14,3 +14,49 @@ body > footer > span {
 article > footer {
   text-align: left;
 }
+
+
+.archive-year {
+  margin-bottom: 3rem;
+}
+
+.archive-year-header {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.archive-meta {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.talks-list {
+  border-left: 2px solid var(--border);
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+}
+
+.talk-entry {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.talk-entry::before {
+  content: "";
+  position: absolute;
+  left: -1.35rem;
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.talk-title {
+  font-weight: 600;
+}
+
+.talk-links a {
+  margin-right: 0.75rem;
+  font-size: 0.9rem;
+}
