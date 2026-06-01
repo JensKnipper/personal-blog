@@ -8,6 +8,16 @@
       slides: https://slides.com/jensknipper/java-scripting
       event: https://www.ittage.informatik-aktuell.de/
 
+- event: Øredev 2026
+  date: 2026-11-05
+  location: Malmö, Sweden
+
+  talks:
+    - title: JavaScript? Nein. Java Scripts! - Scripting mit Java
+      type: Talk
+      slides: https://slides.com/jensknipper/java-scripting
+      event: https://oredev.org/
+
 - event: Voxxed Days Luxembourg 2026
   date: 2026-06-18
   location: Mondorf-les-Bains, Luxembourg
