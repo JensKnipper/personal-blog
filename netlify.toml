@@ -40,6 +40,11 @@
   to = "https://jensknipper.de/:splat"
   force = true
   
+[[redirects]]
+  from = "https://jensknipper.de/feed.xml"
+  to = "https://jensknipper.de/index.xml"
+  force = true
+
 # The default HTTP status code is always 301, but you can define a different
 # one e.g. status = 302
 
