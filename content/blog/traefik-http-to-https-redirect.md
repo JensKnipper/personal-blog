@@ -30,7 +30,7 @@ This results in all traffic coming in at port `80` being redirected to port `443
       - "80:80"
       - "443:443"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 ```
 
 ### Container configuration
@@ -70,7 +70,7 @@ All the services can now be accessed via HTTP and HTTPS.
       - "80:80"
       - "443:443"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 ```
 
 ### Container configuration

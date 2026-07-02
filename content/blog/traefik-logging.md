@@ -93,7 +93,7 @@ A volume has to be defined to persist the file.
       - "--log.level=DEBUG"
       - "--log.filePath=/logs/traefik.log" 
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./logs/:/logs/
 ```
 
@@ -118,7 +118,7 @@ You also need a service, accessible through Traefik, to see this behaviour.
     ports:
       - "80:80"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./logs/:/logs/
 
   whoami:

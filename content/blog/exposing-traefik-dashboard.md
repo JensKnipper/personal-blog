@@ -32,7 +32,7 @@ This is a Traefik specific service which represents the API and the dashboard.
     ports:
        - "80:80"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.api.entrypoints=web"

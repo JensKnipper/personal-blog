@@ -40,7 +40,7 @@ Depending on your use case you might want to set it to `permanent` (HTTP Code 30
     ports:
       - "80:80"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     labels:
       - "traefik.http.routers.redirect-router.entrypoints=web"
       - "traefik.http.routers.redirect-router.rule=Host(`redirect.localhost`)"

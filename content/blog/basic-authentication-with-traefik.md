@@ -26,7 +26,7 @@ All incoming traffic is now routed through this specific entrypoint.
     ports:
       - "80:80"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 ```
 
 
