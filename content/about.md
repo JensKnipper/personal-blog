@@ -12,7 +12,11 @@ To contact me, just open the contact page or use one of the networks listed on t
 
 <br />
 
-**Links**
+### Projects
+
+- [re:Director](https://re-director.github.io): Simple domain redirection management tool. Listed on [awesome-selfhosted](https://awesome-selfhosted.net/#re-director)
+- [Traefik Examples](https://github.com/JensKnipper/traefik-examples): Minimalistic examples for Traefik reverse proxy and docker-compose.
+
+### Links
 
 - [https://www.bytefish.de](https://www.bytefish.de)
-- [https://re-director.github.io](https://re-director.github.io)

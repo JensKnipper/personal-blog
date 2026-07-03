@@ -18,6 +18,17 @@
       slides: https://slides.com/jensknipper/java-scripting
       event: https://oredev.org/
 
+- event: WeAreDevelopers - Online - 2026
+  date: 2026-07-02
+  location: Online
+
+  talks:
+    - title: JavaScript? No. Java Scripts! - Scripting with Java
+      type: Talk
+      slides: https://slides.com/jensknipper/java-scripting
+      event: https://www.wearedevelopers.com/world-congress
+      video: https://www.wearedevelopers.com/en/videos/2094/javascript-no-java-scripts-scripting-with-java
+
 - event: Voxxed Days Luxembourg 2026
   date: 2026-06-18
   location: Mondorf-les-Bains, Luxembourg
