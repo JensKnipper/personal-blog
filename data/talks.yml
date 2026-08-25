@@ -13,7 +13,7 @@
   location: Malmö, Sweden
 
   talks:
-    - title: JavaScript? Nein. Java Scripts! - Scripting mit Java
+    - title: JavaScript? No. Java Scripts! - Scripting with Java
       type: Talk
       slides: https://slides.com/jensknipper/java-scripting
       event: https://oredev.org/
