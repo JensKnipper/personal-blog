@@ -2,7 +2,7 @@
 title: Recording and Slides of My Talk "Local testing of AWS serverless lambda functions" at an OpenValue Meetup
 date: 2022-11-10T01:00:00+00:00
 description: Last week I hold my talk "Local testing of AWS serverless lambda functions" at a virtual meetup of OpenValue. In this post, you can find the slides and the recording of my talk.
-tags: ["Java", "GreenMail", "Talk"]
+tags: ["Java", "AWS", "Talk"]
 cover:
     image: /img/openvalue-lambda-talk.jpg
 ---

@@ -2,7 +2,7 @@
 title: "Accepted as a JavaLand newcomer speaker"
 date: 2022-10-07T01:00:00+00:00
 description: "I struggled with a problem at work, was able to solve it neatly and thought it would make a great topic for a talk or a blog article. So I applied at the call for papers of the JavaLand newcomer program with it and got accepted!"
-tags: ["JavaLand", "talk", "AWS", "lambdas", "Java", "localstack", "testcontainers"]
+tags: ["JavaLand", "Talk", "AWS", "Java"]
 cover:
     image: /img/javaland-2023-newcomer.jpg
 ---

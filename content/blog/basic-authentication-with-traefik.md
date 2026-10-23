@@ -3,7 +3,7 @@ title: "Adding basic authentication to secure a service with Traefik"
 date: 2021-04-15T01:00:00+00:00
 lastmod: 2025-11-11T01:00:00+00:00
 description: "Adding authentication to a service that does not support it by default can be done easily by using Traefik. This way you gain an additional layer of security and you can leverage other features of Traefik like domain names." 
-tags: ["Traefik", "Docker", "Docker-Compose", "Authentication"]
+tags: ["Traefik"]
 ---
 In this article I will show you how to secure a service in Traefik reverse proxy using basic authentication.
 You could use the authentication for example to secure your [Traefik dashboard](../exposing-traefik-dashboard/).

@@ -2,7 +2,7 @@
 title: "Using Sieve to Filter Emails with Zip Attachments"
 date: 2024-07-08T01:00:00+00:00
 description: "I was recently the target of a phishing attack using fake invoices. They were easy to spot, but it was still annoying that they were landing in my inbox. So, I wanted to create a solution where these emails would not bother me anymore."
-tags: ["Roundcube", "Sieve", "Filter"]
+tags: ["Roundcube", "Sieve"]
 ---
 Luckily the emails were easy to spot and also quite similar, which made it easy to create a custom filter for them.  
 They did not mention my name, the subject always contained the word "Invoice" and a zip file was attached.

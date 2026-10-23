@@ -3,7 +3,7 @@ title: "Using Maven on Windows with the Linux subsystem"
 date: 2020-07-03T01:00:00+00:00
 lastmod: 2025-01-23T01:00:00+00:00
 description: "Installing and configuring Maven on Windows does not have to be a pain anymore. Thanks to the WSL it becomes almost as straightforward as using Linux. Although depending on your use case there might be some restrictions."
-tags: ["Windows", "Linux", "WSL", "Maven", "IntelliJ"]
+tags: ["WSL", "Maven"]
 ---
 > **_NOTE:_** The information on this article is mostly outdated, because there have been a lot of changes in the WSL. I would recommend to use the [WSL GUI](https://github.com/microsoft/wslg) now and install all my programming related things in the WSL. Starting any application from the WSL with a GUI will now open a window in the Windows desktop.
 

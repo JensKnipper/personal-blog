@@ -3,7 +3,7 @@ title: "Manually testing email notifications with GreenMail mock mail server"
 date: 2021-02-16T01:00:00+00:00
 lastmod: 2021-07-01T01:00:00+00:00
 description: "Are you sending mails featured with HTML and CSS and want see how they look before pushing your changes to production? You also do not want mails to leak from your local environment to your customer? A mock mail server like GreenMail might just be the tool you need."
-tags: ["Java", "Spring", "GreenMail", "Docker"]
+tags: ["GreenMail"]
 ---
 Whenever developing an application I aim to get local and testing environment as close to production as possible without neglecting elementary things like privacy and security. This gives an advantage when implementing new features. You get the same user experience on your local device. This enables you to find troublesome or unclear sections.  
 It also lowers the barrier for manual testing, which results in more and higher quality feedback from everyone (not only developers) involved in the project. 

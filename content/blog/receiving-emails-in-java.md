@@ -3,7 +3,7 @@ title: "Receiving mails in Java with IMAP or POP3"
 date: 2022-05-30T01:00:00+00:00
 lastmod: 2025-01-23T01:00:00+00:00
 description: "I was recently in need to write some small demo project which was receiving and processing mails. There is a lot of documentation for sending mails, but gathering information about the receiving and processing part is less easy."
-tags: ["Java", "Mail", "IMAP", "POP3"]
+tags: ["Java", "IMAP", "POP3"]
 ---
 This example shows you how to receive mails in Java either using the IMAP or the POP3 protocol.
 The SSL encrypted variants IMAPS and POP3S are also supported. 

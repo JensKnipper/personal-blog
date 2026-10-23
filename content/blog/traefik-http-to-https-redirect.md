@@ -3,7 +3,7 @@ title: "HTTP to HTTPS redirects with Traefik"
 date: 2020-05-02T12:00:00+00:00
 lastmod: 2025-11-11T01:00:00+00:00
 description: "This article covers the basic examples how to redirect HTTP-requests to HTTPS. This can be achieved per domain, for a single application only or globally for all containers."
-tags: ["traefik", "docker", "docker-compose", "http", "https", "ssl"]
+tags: ["Traefik"]
 ---
 Setting up SSL-Encryption with Traefik is incredibly easy due to the included ACME resolver. There is no reason not to use it, as search engines usually rank pages without HTTPS lower than pages which implement the protocol. Also security of yourself and your users should **always** be a critical concern.   
 No redirect to HTTPS may cause users to use your unencrypted site  thus exposing them to a great number of potential vulnerabilities by sending their private data unencrypted across the internet.  

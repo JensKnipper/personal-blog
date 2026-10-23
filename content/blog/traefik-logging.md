@@ -3,7 +3,7 @@ title: "Enable logging in Traefik"
 date: 2022-08-11T01:00:00+00:00
 lastmod: 2022-11-11T01:00:00+00:00
 description: "In this article I will show you how to activate logging in Traefik. There are two kinds of logs in Traefik, the general log and the access log. We will have a look at both of them and take a deeper look into the possibilities they provide."
-tags: ["traefik", "docker", "docker-compose", "redirect"]
+tags: ["Traefik"]
 ---
 
 The examples can be executed locally which allows simple adjustment to your own needs.

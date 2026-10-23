@@ -2,7 +2,7 @@
 title: "Redirecting to an external domain with Traefik"
 date: 2022-04-03T01:00:00+00:00
 description: "Redirecting to another domain is a regular use case I need a lot. Luckily Traefik makes it easy to implement it."
-tags: ["Traefik", "Docker", "Docker-Compose", "Redirect"]
+tags: ["Traefik"]
 ---
 
 In this article I will show you how to use redirects to an external domain in Traefik.

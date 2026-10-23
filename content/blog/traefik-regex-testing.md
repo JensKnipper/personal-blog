@@ -2,7 +2,7 @@
 title: "Testing Regular Expressions in Traefik"
 date: 2020-05-17T20:00:00+00:00
 description: "Testing regular expressions for application configuration is always a pain as every programming language has a slightly different implementation. This results in expressions giving different results for different applications."
-tags: ["Traefik", "Regex", "Regular", "Expression", "Go"]
+tags: ["Traefik"]
 ---
 Sometimes it is not possible or just too much effort to make the Traefik configuration work locally. Testing on a production environment can be dangerous thus should not be an option. In these cases testing small parts of the configuration is essential. Regular expressions are one example where you can save a lot of time when testing outside of traefik.
 
