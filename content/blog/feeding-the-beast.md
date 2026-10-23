@@ -3,6 +3,8 @@ title: 'Feeding the Beast: Who Am I Writing For?'
 date: 2026-10-23T01:00:00+00:00
 description: A personal essay on technical blogging after LLMs, and why I still do it.
 tags: ["Writing", "Essay"]
+cover:
+    image: /img/feeding-the-beast.png
 ---
 
 In the past, my strategy to find new topics for a technical article was simple: if it took more than 30 minutes to research the solution for a problem, it was worth writing about. I had more topics on my list than time and energy to write about.
